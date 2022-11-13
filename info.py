@@ -1,4 +1,4 @@
-import re
+import re, os
 from os import environ
 
 id_pattern = re.compile(r'^.\d+$')
@@ -72,3 +72,7 @@ CAPTION_BUTTON = environ.get("CAPTION_BUTTON", "Support ⚡")
 CAPTION_BUTTON_URL = environ.get("CAPTION_BUTTON_URL", "https://www.google.com/")
 
 YOUR_CHANNEL = environ.get("YOUR_CHANNEL", "https://www.google.com/")
+PORT = os.environ.get("PORT", "8080")
+DB_NAME = os.environ.get("DB_NAME","")     
+DB_URL = os.environ.get("DB_URL","")
+FLOOD = int(os.environ.get("FLOOD", "10"))
